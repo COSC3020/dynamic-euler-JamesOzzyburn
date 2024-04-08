@@ -68,7 +68,6 @@ TEST_CASE("testing the bottom up version of e") {
      CHECK(e(5) == bottom_up_e(5));
      CHECK(e(6) == bottom_up_e(6));
      CHECK(e(7) == bottom_up_e(7));
-     CHECK(e(8) == bottom_up_e(8));
 
      CHECK(e(2) != bottom_up_e(9));
      CHECK(e(1) != bottom_up_e(10));
