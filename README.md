@@ -18,3 +18,6 @@ but you need to go beyond that.
 ## Runtime Analysis
 
 What is the worst-case big $\Theta$ time complexity of your algorithm?
+
+## Answer
+I believe that the repeated work in the original code was that we were recomputing the factorials. In my code I first create two vectors, I then iterate n times and on the first line in the loop I compute the factorial values and store them in an vector and on the second line I calculate the values using the precalculated factorial values. As we are just iterating through a loop it takes $n$. We then sum up the computed values using a reduce which also takes $n$. So in total my code takes $\Theta(n + n)$ which can be simplified to $\Theta(n)$. 
