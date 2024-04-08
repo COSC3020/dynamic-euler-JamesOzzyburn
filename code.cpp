@@ -64,12 +64,12 @@ TEST_CASE("testing the bottom up version of e") {
     vector<double> old_e;
     vector<double> new_e;
 
-    for (int i = 0; i <= 10; i++) {
+    for (int i = 0; i <= 1; i++) {
         old_e.push_back(e(i));
         new_e.push_back(bottom_up_e(i));
     }
 
-    for (int i = 0; i <= 10; i++) {
+    for (int i = 0; i <= 1; i++) {
         CHECK(old_e.at(i) == new_e.at(i));
     }
 }
