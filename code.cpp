@@ -61,15 +61,15 @@ double bottom_up_e(int n) {
 
 //Testing stuff
 TEST_CASE("testing the bottom up version of e") {
-    vector<double> old_e;
-    vector<double> new_e;
+     CHECK(e(1) == bottom_up_e(1));
+     CHECK(e(2) == bottom_up_e(2));
+     CHECK(e(3) == bottom_up_e(3));
+     CHECK(e(4) == bottom_up_e(4));
+     CHECK(e(5) == bottom_up_e(5));
+     CHECK(e(6) == bottom_up_e(6));
+     CHECK(e(7) == bottom_up_e(7));
+     CHECK(e(8) == bottom_up_e(8));
 
-    for (int i = 0; i <= 1; i++) {
-        old_e.push_back(e(i));
-        new_e.push_back(bottom_up_e(i));
-    }
-
-    for (int i = 0; i <= 1; i++) {
-        CHECK(old_e.at(i) == new_e.at(i));
-    }
+     CHECK(e(2) != bottom_up_e(9));
+     CHECK(e(1) != bottom_up_e(10));
 }
